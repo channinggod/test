@@ -1,4 +1,4 @@
-duilib
+# duilib
 
 由官方的duilib( https://github.com/duilib/duilib ) 复制过来的，仅为了个人学习使用。<br />
 可以使用vs2008打开，新增一些学习测试用的demo，之后也可能会做很少的修改，但代码尽量会与官方保持一致。<br />
@@ -14,17 +14,17 @@ duilib
 
 
 
-说明：
+## 说明：
 
-官方库改为本仓库代码后，会遇到CDuiString的一些编译或者运行报错，原因在于我调整了CDuiString的代码（见下方第55点说明），解决方法就是重新使用本仓库的duillib的头文件和.lib重新编译和链接生成自己的程序，解决其中的编译报错（主要是CDuiString转换为LPCTSTR时报错,修改CDuiString.GetData()）即可。
+## 官方库改为本仓库代码后，会遇到CDuiString的一些编译或者运行报错，原因在于我调整了CDuiString的代码（见下方第55点说明），解决方法就是重新使用本仓库的duillib的头文件和.lib重新编译和链接生成自己的程序，解决其中的编译报错（主要是CDuiString转换为LPCTSTR时报错,修改CDuiString.GetData()）即可。
 
-有问题欢迎反馈！
+## 有问题欢迎反馈！
 
 
 
-2020/12/31更新移除掉了libpng相关库，apng解析绘制直接使用stbimage和自己实现的代码来处理了。同时gif也由gdi+解析改为了stbimage处理。
+### 2020/12/31更新移除掉了libpng相关库，apng解析绘制直接使用stbimage和自己实现的代码来处理了。同时gif也由gdi+解析改为了stbimage处理。
 
-这样看来是有机会将gif和apng统一成一个控件的，进一步来看考虑，是有机会让所有支持背景图的控件支持gif和apng的，暂无需求先不考虑了。
+# 这样看来是有机会将gif和apng统一成一个控件的，进一步来看考虑，是有机会让所有支持背景图的控件支持gif和apng的，暂无需求先不考虑了。
 
 <br />
 
@@ -147,11 +147,13 @@ duilib
     7).因为有些窗口原先不是分层窗口，上面的文字,border等都是gdi绘制，其像素没有alpha通道，启用分层窗口后会变透明，鼠标也会穿透。为了便于使用阴影窗口，引入了nolayeredpadding属性。<br />
     8)通过nolayeredpadding来设置非分层区域的外边距。意思是，窗口大小减去外边距之后的矩形区域，其像素将被强制修复alpha为255。这样就避免透明和鼠标穿透了。<br />
 
+```javascript
 var a=b;
 var ttt;
 setTimeOut(function(){},1111);
 
 
+```
 
 
 

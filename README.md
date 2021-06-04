@@ -1,6 +1,3 @@
----
-
----
 
 # duilib
 
@@ -35,7 +32,7 @@
 <div style="background-color:red">11111111111111111111</div>
 ```
 
-
+<span style="color:red;">这是比font标签更好的方式。可以试试。</span>
 
 ## 说明：
 
